@@ -47,15 +47,10 @@ We have followed Model View View Model architecture to construct our application
 
 ## Contributors
 
-- [@Harsh Dhar Agarwal](https://github.com/hd-agarwal)
 - [@Parth Johri](https://github.com/ParthJohri)
+- [@Harsh Dhar Agarwal](https://github.com/hd-agarwal)
 - [@Prince Mendiratta](https://github.com/Prince-Mendiratta)
 - [@Varin Thakur](https://github.com/VarinThakur)
-
-## Feedback
-
-If you have any feedback, please reach out to us at hareshnayak018@gmail.com
-
 
 ## Screenshots
 <img width="203" align="left" alt="QUIZ ACTIVITY" src="https://user-images.githubusercontent.com/76129377/148777270-26b139f5-63c2-4deb-b580-60396b227a0f.png">
