@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Quotes"
+        android:id="@+id/affirmationsFragment"
+        android:icon="@drawable/ic_baseline_format_quote_24"/>
+    <item android:title="Facts"
+        android:id="@+id/factsFragment"
+        android:icon="@drawable/ic_baseline_fact_check_24"/>
+
+</menu>

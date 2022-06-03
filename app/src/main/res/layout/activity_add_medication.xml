@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMedication">
+
+    <TextView
+        android:id="@+id/medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Add Medication"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/medicine_types"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medication">
+
+        <RadioButton
+            android:id="@+id/tablet"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/tablet"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/pill"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/pill"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/syrup"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/syrup"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/inhaler"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/inhaler"
+            android:button="@null" />
+
+    </RadioGroup>
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/tablet"-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:background="@drawable/tablet"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/medication"-->
+    <!--        />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/pill"-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        android:background="@drawable/pill"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tablet"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/medication"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_marginStart="24dp"/>-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/syrup"-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/pill"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/medication"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:background="@drawable/syrup"-->
+    <!--        />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/inhaler"-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/syrup"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/medication"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:background="@drawable/inhaler"-->
+    <!--        />-->
+
+    <EditText
+        android:id="@+id/med_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
+        android:hint="Enter Medicine Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/medicine_types"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <LinearLayout
+        android:id="@+id/doses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/med_name">
+
+        <CheckBox
+            android:id="@+id/cbMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Morning"
+            android:buttonTint="#EB9900"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <CheckBox
+            android:id="@+id/cbAfternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Afternoon"
+            android:buttonTint="#EB9900"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+          />
+
+        <CheckBox
+            android:id="@+id/cbEvening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Evening"
+            android:buttonTint="#EB9900"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/medicinegroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doses">
+
+
+        <RadioButton
+            android:id="@+id/beforemeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#EB9900"
+            android:text="Before Meal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/withfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#EB9900"
+            android:text="With Food"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/aftermeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="#EB9900"
+            android:text="After Meal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/add_medicine"
+        android:layout_width="327dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#EB9900"
+        android:text="Add Medicine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicinegroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Medicine tracker</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="question2">Do you meditate?</string>
+    <string name="question1">Do you eat Fruits?</string>
+    <string name="question3">Do you drink a litre of water per day?</string>
+    <string name="question5">Do you sleep for around 8hrs per day?</string>
+    <string name="question4">Do you smoke?\n</string>
+    <string name="heading">HEALTH QUIZ : THE MOMENT OF TRUTH</string>
+    <string name="answer_all_questions">Please answer all questions to proceed!</string>
+    <string name="submit">SUBMIT</string>
+    <string name="Name">Please enter your Name.</string>
+</resources>

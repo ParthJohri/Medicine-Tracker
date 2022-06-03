@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager2"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/quotes"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/ic_baseline_medical_services_24" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvUsertitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#E3A201"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Hi"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <TextView
+            android:id="@+id/tvUserText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="It's time to take your medicines."
+            android:textColor="#F19E00"
+            app:layout_constraintStart_toStartOf="@+id/tvHappinessScore"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsertitle" />
+
+        <TextView
+            android:id="@+id/tvHappinessScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="HAPPINESS SCORE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/tvSmileValue"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserText" />
+
+        <TextView
+            android:id="@+id/tvSmileValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Smile Value:"
+            app:layout_constraintStart_toStartOf="@+id/tvFeedback"
+            app:layout_constraintTop_toBottomOf="@+id/tvHappinessScore" />
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="FEEDBACK:"
+            android:textColor="#EC9B00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSmileValue" />
+
+        <TextView
+            android:id="@+id/tvFeedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="ALL IS WELL"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tvFeedback"
+            app:layout_constraintTop_toBottomOf="@+id/tvSmileValue" />
+
+        <TextView
+            android:id="@+id/tvTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="TRACKER"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback" />
+
+        <TextView
+            android:id="@+id/tvSmileScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="70"
+            android:textColor="#EB9900"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvSmileValue"
+            app:layout_constraintTop_toTopOf="@+id/tvSmileValue" />
+
+        <TextView
+            android:id="@+id/tvSmileScorePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="%"
+            android:textColor="#EB9900"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvSmileScore"
+            app:layout_constraintTop_toTopOf="@+id/tvSmileValue" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addMedication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            app:backgroundTint="#E3A201"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afternoon"
+            app:srcCompat="@drawable/addbutton" />
+
+        <Button
+            android:id="@+id/evening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#EB9900"
+            android:text="EVENING"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/afternoon"
+            app:layout_constraintTop_toBottomOf="@+id/addMedicines" />
+
+        <Button
+            android:id="@+id/afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EB9900"
+            android:text="AFTERNOON"
+            app:layout_constraintStart_toEndOf="@+id/morning"
+            app:layout_constraintTop_toBottomOf="@+id/addMedicines" />
+
+        <Button
+            android:id="@+id/morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EB9900"
+            android:text="Morning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addMedicines" />
+
+        <TextView
+            android:id="@+id/addMedicines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="ADD YOUR MEDICINES"
+            android:textAlignment="viewStart"
+            android:textColor="#E3A201"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTracker" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <TextView
+            android:id="@+id/tvInitiative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="An Initiative By GDSC-DTU"
+            style="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:max="100"
+            app:layout_constraintTop_toBottomOf="@+id/tvSmileValue" />
+
+        <TextView
+            android:id="@+id/orderMedicines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="ORDER MEDICINES"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addMedication" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Parth"
+            android:textColor="#EB9900"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvUserText"
+            app:layout_constraintStart_toEndOf="@+id/tvUsertitle"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/netmeds"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:scaleType="centerCrop"
+            android:src="@drawable/netmeds2"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="7dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#EB9900"
+            app:civ_shadow_radius="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderMedicines" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/pharmeasy"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="98dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pharmeasy"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="7dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="#EB9900"
+            app:civ_shadow_radius="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/netmeds"
+            app:layout_constraintTop_toBottomOf="@+id/orderMedicines" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

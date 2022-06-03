@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/affirmationsFragment">
+    <fragment
+        android:id="@+id/affirmationsFragment"
+        android:name="com.examples.medicinetracker.affirmations.ui.main.AffirmationsFragment"
+        android:label="AffirmationsFragment" >
+        <action
+            android:id="@+id/action_affirmationsFragment_to_factsFragment"
+            app:destination="@id/factsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/factsFragment"
+        android:name="com.examples.medicinetracker.affirmations.ui.main.facts.FactsFragment"
+        android:label="fragment_facts"
+        tools:layout="@layout/fragment_facts" />
+</navigation>
